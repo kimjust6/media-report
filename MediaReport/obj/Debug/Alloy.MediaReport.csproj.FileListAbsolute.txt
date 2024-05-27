@@ -1,0 +1,57 @@
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\bin\Debug\module.config
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\bin\Debug\Alloy.MediaReport.dll.config
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\bin\Debug\Alloy.MediaReport.deps.json
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\bin\Debug\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\bin\Debug\Alloy.MediaReport.pdb
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.csproj.AssemblyReference.cache
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.csproj.SuggestedBindingRedirects.cache
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.dll.config
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.AssemblyInfoInputs.cache
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.AssemblyInfo.cs
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.csproj.CoreCompileInputs.cache
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.RazorAssemblyInfo.cache
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.RazorAssemblyInfo.cs
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.sourcelink.json
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets.build.json
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets.development.json
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets\msbuild.Alloy.MediaReport.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets\msbuild.build.Alloy.MediaReport.props
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets\msbuild.buildMultiTargeting.Alloy.MediaReport.props
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets\msbuild.buildTransitive.Alloy.MediaReport.props
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\staticwebassets.pack.json
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\scopedcss\bundle\Alloy.MediaReport.styles.css
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\refint\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\Alloy.MediaReport.pdb
+C:\Users\JustinKim\Downloads\repos\Dotnet MVC\Alloy Test - Copy\media-report\src\MediaReport\obj\Debug\ref\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\module.config
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\client\package.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\client\src\__tests__\media-report-data.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\client\tsconfig.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\client\tsconfig.node.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\Alloy.MediaReport.dll.config
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\Alloy.MediaReport.deps.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\bin\Debug\Alloy.MediaReport.pdb
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.csproj.AssemblyReference.cache
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.csproj.SuggestedBindingRedirects.cache
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.dll.config
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.AssemblyInfoInputs.cache
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.AssemblyInfo.cs
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.csproj.CoreCompileInputs.cache
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.RazorAssemblyInfo.cache
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.RazorAssemblyInfo.cs
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets.build.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets.development.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets\msbuild.Alloy.MediaReport.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets\msbuild.build.Alloy.MediaReport.props
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets\msbuild.buildMultiTargeting.Alloy.MediaReport.props
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets\msbuild.buildTransitive.Alloy.MediaReport.props
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\staticwebassets.pack.json
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\scopedcss\bundle\Alloy.MediaReport.styles.css
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\refint\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.pdb
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\ref\Alloy.MediaReport.dll

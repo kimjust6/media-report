@@ -2,9 +2,9 @@
     <Import Project="version.props" />
     <PropertyGroup>
         <Product Condition=" '$(Product)' == '' ">Alloy.MediaReport</Product>
-        <Company>Grzegorz Wiechec</Company>
-        <Authors>Grzegorz Wiechec</Authors>
-        <Copyright>© 2019-2023 Grzegorz Wiechec</Copyright>
+        <Company>Yaksa</Company>
+        <Authors>Yaksa</Authors>
+        <Copyright>© 2024 Yaksa</Copyright>
         <PackageProjectUrl>https://github.com/gregwiechec/media-report</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/gregwiechec/media-report/blob/master/LICENSE</PackageLicenseUrl>
         <PackageTags>episerver optimizely media</PackageTags>

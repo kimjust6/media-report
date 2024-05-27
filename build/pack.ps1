@@ -29,14 +29,14 @@ $runtimeNextMajorVersion = ($runtimeMajor.ToString() + ".0.0")
 Get-ChildItem -Path out\ -Exclude dtk | Remove-Item -Recurse -Force
 
 #copy assets approval reviews
-Copy-Item -Path src\MediaReport\ClientResources\ -Destination out\Alloy.MediaReport\$version\ClientResources -recurse -Force
-Copy-Item src\MediaReport\module.config out\Alloy.MediaReport
+Copy-Item -Path MediaReport\ClientResources\ -Destination out\Alloy.MediaReport\$version\ClientResources -recurse -Force
+Copy-Item MediaReport\module.config out\Alloy.MediaReport
 ((Get-Content -Path out\Alloy.MediaReport\module.config -Raw).TrimEnd() -Replace '=""', "=`"$version`"" ) | Set-Content -Path out\Alloy.MediaReport\module.config
 Set-Location $workingDirectory\out\Alloy.MediaReport
 Start-Process -NoNewWindow -Wait -FilePath $zip -ArgumentList "a", "Alloy.MediaReport.zip", "$version", "module.config"
 Set-Location $workingDirectory
 
 # Packaging public packages
-dotnet pack -c $configuration /p:PackageVersion=$version /p:CmsUIVersion=$cmsUIVersion /p:CmsUINextMajorVersion=$cmsUINextMajorVersion /p:RuntimeVersion=$runtimeVersion /p:RuntimeNextMajorVersion=$runtimeNextMajorVersion src/MediaReport.sln
+dotnet pack -c $configuration /p:PackageVersion=$version /p:CmsUIVersion=$cmsUIVersion /p:CmsUINextMajorVersion=$cmsUINextMajorVersion /p:RuntimeVersion=$runtimeVersion /p:RuntimeNextMajorVersion=$runtimeNextMajorVersion MediaReport.sln
 
 Pop-Location
