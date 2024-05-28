@@ -9,7 +9,9 @@
         "preview": "vite preview",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
-        "test": "jest"
+        "test": "jest",
+        "nice":"cd ../../ && buildClient.cmd",
+        "pack":"cd ../../ && pack.cmd"
     },
     "dependencies": {
         "@emotion/react": "^11.10.6",
