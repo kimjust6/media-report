@@ -55,3 +55,4 @@ C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.Medi
 C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\refint\Alloy.MediaReport.dll
 C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.pdb
 C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\ref\Alloy.MediaReport.dll
+C:\Users\JustinKim\Downloads\media-report-yaksa\MediaReport\obj\Debug\Alloy.MediaReport.sourcelink.json

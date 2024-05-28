@@ -53,7 +53,9 @@ const MediaReport = ({ settings }: MediaReport) => {
         }
 
         //TODO: url from server
-        xhr.open("get", "/Episerver/Alloy.MediaReport/Report/GetMedia?" + queryString.toString());
+        // xhr.open("get", "/Episerver/Alloy.MediaReport/Report/GetMedia?" + queryString.toString());
+        // TODO: Remove line below, and uncomment line above
+        xhr.open("get", "https://localhost:5000/Episerver/Alloy.MediaReport/Report/GetMedia?" + queryString.toString());
         xhr.setRequestHeader("Accept", "application/json");
         xhr.send();
     };

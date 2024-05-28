@@ -8,6 +8,7 @@ public class MediaReportMenuProvider : IMenuProvider
 {
     public IEnumerable<MenuItem> GetMenuItems()
     {
+        var nice = typeof(MediaReportMenuProvider);
         var url = Paths.ToResource(typeof(MediaReportMenuProvider), "Report/Index");
 
         var urlMenuItem1 = new UrlMenuItem("Media report", MenuPaths.Global + "/cms/admin/mediareport", url)

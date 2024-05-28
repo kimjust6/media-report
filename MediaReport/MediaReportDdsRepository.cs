@@ -12,7 +12,7 @@ public interface IMediaReportDdsRepository
         IEnumerable<ContentReference> references, int? height, int? width, string errorText);
 
     IEnumerable<MediaReportDdsItem> ListAll();
-
+    
     IEnumerable<MediaReportDdsItem> Search(int? sizeFrom, int? sizeTo, bool? isLocalContent, bool? showErrors,
         int? pageIndex, int? pageSize, int? fromNumberOfReferences, int? toNumberOfReferences,
         string sortBy, string sortOrder, out int totalCount);

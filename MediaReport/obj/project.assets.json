@@ -8844,7 +8844,7 @@
     "C:\\Users\\JustinKim\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.5",
+    "version": "1.0.7",
     "restore": {
       "projectUniqueName": "C:\\Users\\JustinKim\\Downloads\\media-report-yaksa\\MediaReport\\Alloy.MediaReport.csproj",
       "projectName": "Alloy.MediaReport",
@@ -8853,6 +8853,7 @@
       "outputPath": "C:\\Users\\JustinKim\\Downloads\\media-report-yaksa\\MediaReport\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\Users\\JustinKim\\Downloads\\repos\\Dotnet MVC\\Alloy Test 2\\NuGet.Config",
         "C:\\Users\\JustinKim\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8860,8 +8861,9 @@
         "net6.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.optimizely.com/feed/packages.svc/": {}
+        "C:\\Users\\JustinKim\\Downloads\\media-report-yaksa\\artifacts\\packages": {},
+        "https://api.nuget.optimizely.com/v3/index.json": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

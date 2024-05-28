@@ -8,10 +8,11 @@ namespace Alloy.MediaReport;
 public interface ISettingsResolver
 {
     public ReportSettings Get();
+    // public ExcelSettings Get();
 }
 
 [ServiceConfiguration(typeof(ISettingsResolver))]
-public class SettingsResolver: ISettingsResolver
+public class SettingsResolver : ISettingsResolver
 {
     private readonly IScheduledJobRepository _scheduledJobRepository;
 
@@ -31,6 +32,15 @@ public class SettingsResolver: ISettingsResolver
                 "default#/ScheduledJobs/detailScheduledJob/" + GetMediaReportScheduledJobId())
         };
     }
+
+    // public ExcelSettings Get()
+    // {
+    //     return new ExcelSettings
+    //     {
+    //         MediaReportScheduledJobUrl = Paths.ToResource("EPiServer.Cms.UI.Admin",
+    //             "default#/ScheduledJobs/detailScheduledJob/" + GetMediaReportScheduledJobId())
+    //     };
+    // }
 
     private Guid GetMediaReportScheduledJobId()
     {
@@ -57,9 +67,36 @@ public class SettingsResolver: ISettingsResolver
 
         return Guid.Empty;
     }
+    
+    private Guid GetMediaExcelReportScheduledJobId()
+        {
+            if (_jobId.HasValue)
+            {
+                return _jobId.Value;
+            }
+    
+            lock (_lock)
+            {
+                if (_jobId.HasValue)
+                {
+                    return _jobId.Value;
+                }
+    
+                var job = _scheduledJobRepository.List()
+                    .FirstOrDefault(x => x.TypeName == typeof(MediaReportExcelScheduled).FullName);
+                if (job != null)
+                {
+                    _jobId = job.ID;
+                    return _jobId.Value;
+                }
+            }
+    
+            return Guid.Empty;
+        }
 }
 
 public class ReportSettings
 {
     public string MediaReportScheduledJobUrl { get; set; }
+    public string ExcelScheduledJobUrl { get; set; }
 }

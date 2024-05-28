@@ -131,9 +131,13 @@ export default function ListFilter({ filterRange, onFilterChange }: ListFilter) 
         );
     };
 
+    const onDownloadExcel = () => {
+        console.log("nice");
+    };
+
     return (
         <>
-            <Grid container alignItems="baseline" gap={3}>
+            <Grid container alignItems="baseline">
                 {filterRange?.maxSize > 0 && (
                     <Grid item>
                         <FilterControl
@@ -204,6 +208,9 @@ export default function ListFilter({ filterRange, onFilterChange }: ListFilter) 
                 <Grid item>
                     <Button variant="contained" onClick={onSearch}>
                         Search
+                    </Button>
+                    <Button variant="contained" onClick={onDownloadExcel}>
+                        Export to Excel
                     </Button>
                 </Grid>
             </Grid>

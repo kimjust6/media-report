@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Alloy.MediaReport;
 
-[Authorize(Roles = "CmsAdmin,WebAdmins,Administrators")]
+// [Authorize(Roles = "CmsAdmin,WebAdmins,Administrators")]
+[AllowAnonymous]
 public class ReportController : Controller
 {
     private readonly MediaDtoConverter _mediaDtoConverter;
@@ -38,4 +39,14 @@ public class ReportController : Controller
 
         return new JsonDataResult(new {items = result, filterRange = mediaReportItemsSum, totalCount});
     }
+    
+    public JsonResult GetExcel()
+        {
+            var items = _mediaReportDdsRepository.ListAll().ToList();
+            var result = items.Select(_mediaDtoConverter.Convert).ToList();
+    
+            var mediaReportItemsSum = _mediaReportItemsSumDdsRepository.GetSum();
+    
+            return new JsonDataResult(new {items = result, filterRange = mediaReportItemsSum});
+        }
 }
