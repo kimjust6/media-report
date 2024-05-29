@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("© 2024 Yaksa")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c52194cd73342ab788f7da6e6154422f9c11f32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eaab3967e6bd0146b5a71315c9ef965e1364fe5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Alloy.MediaReport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Alloy.MediaReport")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

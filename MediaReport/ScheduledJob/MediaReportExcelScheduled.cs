@@ -1,4 +1,6 @@
-﻿using EPiServer;
+﻿using System.Text;
+using ClosedXML.Excel;
+using EPiServer;
 using EPiServer.Cms.Shell.UI.Rest.Capabilities;
 using EPiServer.Cms.Shell.UI.Rest.Internal;
 using EPiServer.Core;
@@ -6,7 +8,8 @@ using EPiServer.DataAbstraction;
 using EPiServer.PlugIn;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
-using EPiServer.Shell.Web.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Extensions;
 
 
 namespace Alloy.MediaReport.ScheduledJob;
@@ -22,72 +25,98 @@ namespace Alloy.MediaReport.ScheduledJob;
 public class MediaReportExcelScheduled : ScheduledJobBase
 {
     private bool _isStopped = false;
-    private readonly MediaDtoConverter _mediaDtoConverter;
     private readonly IMediaReportDdsRepository _mediaReportDdsRepository;
-    private readonly IMediaLoader _mediaLoader;
-    private readonly IMediaReportItemsSumDdsRepository _mediaReportItemsSumDdsRepository;
-    private readonly IMediaSizeResolver _mediaSizeResolver;
-    private readonly IContentCapability _isLocalContent;
-    private readonly ReferencedContentResolver _referencedContentResolver;
     private readonly IContentLoader _contentLoader;
-    private readonly IMediaHierarchyRootResolver _mediaHierarchyRootResolver;
+    
 
-    public MediaReportExcelScheduled(IMediaReportDdsRepository mediaReportDdsRepository, IMediaLoader mediaLoader,
-        IMediaSizeResolver mediaSizeResolver, IEnumerable<IContentCapability> capabilities,
-        IContentLoader contentLoader, ReferencedContentResolver referencedContentResolver,
-        IMediaReportItemsSumDdsRepository mediaReportItemsSumDdsRepository,
-        IMediaHierarchyRootResolver mediaHierarchyRootResolver,
-        MediaDtoConverter mediaDtoConverter)
+    public MediaReportExcelScheduled(
+        IMediaReportDdsRepository mediaReportDdsRepository, 
+        IContentLoader contentLoader)
     {
         _mediaReportDdsRepository = mediaReportDdsRepository;
-        _mediaLoader = mediaLoader;
-        _mediaSizeResolver = mediaSizeResolver;
-        _isLocalContent = capabilities.Single(x => x.Key == "isLocalContent");
         _contentLoader = contentLoader;
-        _referencedContentResolver = referencedContentResolver;
-        _mediaReportItemsSumDdsRepository = mediaReportItemsSumDdsRepository;
-        _mediaHierarchyRootResolver = mediaHierarchyRootResolver;
         IsStoppable = true;
-        _mediaDtoConverter = mediaDtoConverter;
+        
     }
 
     public override string Execute()
     {
         var countProcessedItems = 0;
         _isStopped = false;
-
-        var updatedList = new List<ContentReference>();
-        var itemsSum = MediaReportItemsSum.Empty();
-
-        // get the values
-        var allDdsItems = _mediaReportDdsRepository.ListAll().ToList();
-        foreach (var mediaReportDdsItem in allDdsItems)
+        //open a new workbook
+        using (var workbook = new XLWorkbook())
         {
-            if (_isStopped)
-            {
-                return "The job was stopped";
-            }
+            var worksheet = workbook.Worksheets.Add("Report");
 
-
-            if (_contentLoader.TryGet<IContent>(mediaReportDdsItem.ContentLink, out _))
+            // get the values from dds
+            var allDdsItems = _mediaReportDdsRepository.ListAll().ToList();
+            foreach (var mediaReportDdsItem in allDdsItems)
             {
-                ++countProcessedItems;
+                if (_isStopped)
+                {
+                    return "The job was stopped";
+                }
                 // convert to excel
-                
+                if (_contentLoader.TryGet<IContent>(mediaReportDdsItem.ContentLink, out _))
+                {
+                    ++countProcessedItems;
+                    // start from Col A
+                    var col = 'A';
+                    foreach (var propInfo in mediaReportDdsItem.GetType().GetProperties())
+                    {
+                        if (countProcessedItems == 1)
+                        {
+                            worksheet.Cell(col.ToString() + countProcessedItems).Value = propInfo.Name;
+                        }
+                        else if (propInfo.Name == "References")
+                        {
+                            var myReferences = propInfo.GetValue(mediaReportDdsItem, null) + "";
+                            var split = myReferences.Split(',');
+                            StringBuilder sb = new();
+
+                            foreach (var val in split)
+                            {
+                                sb.Append("https://localhost:5000/EPiServer/CMS/#context=epi.cms.contentdata:///");
+                                sb.Append(val);
+                                sb.Append(',');
+                            }
+
+                            if (sb.Length > 0)
+                            {
+                                --(sb.Length);
+                            }
+
+                            worksheet.Cell(col.ToString() + countProcessedItems).Value = sb.ToString();
+                        }
+                        else
+                        {
+                            worksheet.Cell(col.ToString() + countProcessedItems).Value =
+                                (propInfo.GetValue(mediaReportDdsItem, null) ?? "null").ToString();
+                        }
+
+                        col = (char)(col + 1);
+                    }
+                }
+                // else
+                // {
+                //     _mediaReportDdsRepository.Delete(mediaReportDdsItem.ContentLink);
+                // }
+
                 // save to file
+                try
+                {
+                    workbook.SaveAs("wwwroot/MediaReport.xlsx");
+                }
+                catch (Exception e)
+                {
+                    Stop();
+                    throw new Exception("Failed to open MediaReport.xlsx: " + e.Message);
+                }
 
                 // upload file to dds
             }
-            // else
-            // {
-            //     _mediaReportDdsRepository.Delete(mediaReportDdsItem.ContentLink);
-            // }
         }
 
-        // var items = _mediaReportDdsRepository.Search(null, null, null, null,
-        //     1, 1000, null, null, null, null, out var totalCount).ToList();
-        // var result = items.Select(_mediaDtoConverter.Convert).ToList();
-        // var nice = new JsonDataResult(new { items = result, filterRange = mediaReportItemsSum, totalCount });
         return $"Job completed ({countProcessedItems} media content processed)";
     }
 

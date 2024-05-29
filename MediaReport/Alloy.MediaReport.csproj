@@ -19,6 +19,7 @@
       <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
     </PropertyGroup>
 	<ItemGroup>
+        <PackageReference Include="ClosedXML" Version="0.102.2" />
         <PackageReference Include="EPiServer.CMS.UI.Core" />
     </ItemGroup>
 	<ItemGroup>
