@@ -125,7 +125,7 @@ public class MediaReportExcelScheduled : ScheduledJobBase
                 // save to file
                 try
                 {
-                    workbook.SaveAs("./MediaReport.xlsx");
+                    workbook.SaveAs("./wwwroot/MediaReport.xlsx");
                 }
                 catch (Exception e)
                 {
