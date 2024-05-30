@@ -8999,7 +8999,7 @@
     "C:\\Users\\JustinKim\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.7",
+    "version": "1.0.9",
     "restore": {
       "projectUniqueName": "C:\\Users\\JustinKim\\Downloads\\media-report-yaksa\\MediaReport\\Alloy.MediaReport.csproj",
       "projectName": "Alloy.MediaReport",
@@ -9033,6 +9033,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
